@@ -1,5 +1,8 @@
-export default async function indexRoutes(server, options, done) {
+export default async function indexRoutes(server, options) {
   server.get("/", async (request, reply) => {
-    return { hello: "world" };
+    return {
+      hello: "hello world",
+      debugLevel: server.config.DEBUG_LEVEL,
+    };
   });
 }
