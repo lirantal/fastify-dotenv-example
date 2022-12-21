@@ -56,4 +56,5 @@ Note that we're specifically doing two important decisions here:
 1. We're registering the plugin in the same ancestor plugins hierarchy of the application itself so that other plugins, routes and such that are registered on this level can access the decoration's we've set in place within the config plugin.
 2. Before the Fastify application initializes with the classic `fastify.listen()` we're calling `fastify.ready()` which is an async method, in order to load up all the plugins and execute their `fastify.decorate` actions. Then, this is available to use across other calls such as `fastify.listen({port: fastify.config.HTTP_PORT})`
 
-
+# Author
+Liran Tal <liran.tal@gmail.com>
