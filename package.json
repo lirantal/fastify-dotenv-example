@@ -2,7 +2,7 @@
   "name": "fastify-dotenv-example",
   "version": "1.0.0",
   "description": "A Fastify example codebase for using dotenv",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,9 +10,9 @@
     "type": "git",
     "url": "git+https://github.com/lirantal/fastify-dotenv-example.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "type": "module",
+  "author": "Liran Tal",
+  "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/lirantal/fastify-dotenv-example/issues"
   },
