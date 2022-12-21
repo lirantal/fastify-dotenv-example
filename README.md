@@ -2,6 +2,24 @@
 
 This repository aims to provide Node.js developers who wish to build upon the [Fastify application framework](https://www.fastify.io) and use a configuration element that is based on a process's environment variable
 
+## Using the demo
+
+As a pre-requisite to using this demo Fastify application you need to copy the `.env-sample` file to `.env` so that the `dotenv` integration will load it up:
+
+```sh
+cp .env-sample .env
+```
+
+Then run the Node.js server:
+
+```sh
+npm run start
+```
+
+Now, you're ready to use this demo application in the following ways:
+1. Inspect the `server.js` code and notice that the server instantiates based on an HTTP port information that is loaded from configuration.
+2. Make a request to the top level `/` URL and notice that the `debugLevel` property is read from the `.env` configuration. You can fire a request from the CLI to test it: `curl "http://localhost:3000"`
+
 ## Environment variable configuration
 
 It's common to access environment variables to configure different aspects of a running
