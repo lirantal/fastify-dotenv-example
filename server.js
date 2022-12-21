@@ -1,6 +1,9 @@
 import Fastify from "fastify";
+import fastifyPlugin from "fastify-plugin";
+import indexRoutes from "./routes/index.js";
 
 const fastify = Fastify({ logger: true });
+fastify.register(fastifyPlugin(indexRoutes));
 
 async function initAppServer() {
   try {
