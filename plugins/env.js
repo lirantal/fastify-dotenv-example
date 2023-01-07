@@ -1,6 +1,7 @@
 import * as dotenv from "dotenv";
+import fastifyPlugin from "fastify-plugin";
 
-export default async function configPlugin(server, options, done) {
+async function configPlugin(server, options, done) {
   try {
     const envConfig = dotenv.config();
     server.decorate("config", envConfig.parsed);
@@ -9,3 +10,5 @@ export default async function configPlugin(server, options, done) {
     done(err);
   }
 }
+
+export default fastifyPlugin(configPlugin);
