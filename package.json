@@ -4,6 +4,9 @@
   "description": "A Fastify example codebase for using dotenv",
   "main": "server.js",
   "scripts": {
+    "docker:build": "docker build -t fastify-dotenv-example .",
+    "docker:run": "npm run docker:build && docker run --rm -p 3000:3000 --name fastify-dotenv-example fastify-dotenv-example ",
+    "docker:sh": "docker exec -it fastify-dotenv-example /bin/sh",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
