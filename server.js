@@ -16,7 +16,10 @@ async function initAppServer() {
   await fastify.ready();
 
   try {
-    await fastify.listen({ port: fastify.config.HTTP_PORT || 3000 });
+    await fastify.listen({
+      port: fastify.config.HTTP_PORT || 3000,
+      host: fastify.config.HTTP_HOST || "localhost",
+    });
   } catch (err) {
     fastify.log.error(err);
     process.exit(1);
